@@ -37,9 +37,9 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        saveBook: async (parent, { input }, context) => {
+        saveBook: async (parent, { bookData }, context) => {
             if (context.user) {
-                const updatedUser = await User.findByIdAndUpdate(context.user._id, { $addToSet: { savedBooks: input } }, { new: true });
+                const updatedUser = await User.findByIdAndUpdate(context.user._id, { $addToSet: { savedBooks: bookData } }, { new: true });
                 return updatedUser;
             }
             throw new AuthenticationError('You need to be logged in to save a book');
