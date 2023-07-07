@@ -1,5 +1,5 @@
 import { useQuery, useMutation } from '@apollo/client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Container,
   Card,
@@ -27,13 +27,9 @@ const SavedBooks = () => {
     }
 
     try {
-      const response = await removeBook({
-        variables: { bookId: bookId },
+       await removeBook({
+        variables: { bookId },
       });
-
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
 
       removeBookId(bookId);
     } catch (err) {
