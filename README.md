@@ -8,7 +8,7 @@ This search engine uses the Google Books API to find books and stores them in a 
 ## Links
 
 - GitHub Repository: https://github.com/blakeedwards3/book-search-engine
-- Deployed URL: https://dashboard.heroku.com/apps/sheltered-tor-64488
+- Deployed URL: https://sheltered-tor-64488-114c05a64f4b.herokuapp.com/
 
 ## Website Screenshot
 
